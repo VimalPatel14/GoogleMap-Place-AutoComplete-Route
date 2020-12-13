@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Google Map Demo</string>
+    <string name="btn_cancel">CANCEL</string>
+
+
+    <string name="btn_go">Go</string>
+    <string name="message_enable_location">enable location</string>
+    <string name="add_home">add home</string>
+    <string name="add_work">add work</string>
+    <string name="msg_delete">delete</string>
+
+    <string name="btn_save">SAVE</string>
+    <string name="btn_ok">Ok</string>
+    <string name="title_savelocation">Save Location</string>
+</resources>

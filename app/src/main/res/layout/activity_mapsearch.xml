@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Map.MapSearchActivity">
+
+    <RelativeLayout
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <fragment
+            android:id="@+id/map"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp" />
+
+        <LinearLayout
+            android:id="@+id/linearmain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/white_round_backgrond"
+            android:elevation="@dimen/dp_1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:textAlignment="viewStart"
+                android:id="@+id/edEnterLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:background="@android:color/transparent"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:drawablePadding="@dimen/dp_20"
+                android:gravity="start|center"
+                android:hint="search locations"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_5"
+                android:textColor="@color/black"
+
+                >
+
+                <requestFocus />
+            </EditText>
+
+            <ImageView
+                android:id="@+id/imgClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linearmain"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+
+
+
+            <ListView
+
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:background="@drawable/white_round_backgrond"
+                android:cacheColorHint="@android:color/transparent"
+                android:elevation="@dimen/dp_1"
+                android:scrollbars="none"
+                android:scrollingCache="false"
+                android:visibility="invisible" />
+
+            <TextView
+
+                android:id="@+id/textviewSearchResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/white_round_backgrond"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:drawablePadding="@dimen/dp_20"
+                android:elevation="@dimen/dp_1"
+                android:gravity="start|center"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_5"
+                android:text="You search for"
+                android:textColor="@color/black"
+                android:textColorHint="@color/font_hint_color"
+                android:visibility="gone">
+
+
+            </TextView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
